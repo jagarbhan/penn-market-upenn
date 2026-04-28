@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penn Market | Buy and Sell Around Campus</title>
+    <meta
+      name="description"
+      content="Penn-themed campus marketplace for students to buy and sell furniture, tech, books, and dorm essentials around UPenn."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Penn Market home">
+          <span class="brand-mark">P</span>
+          <span class="brand-copy">
+            <strong>Penn Market</strong>
+            <span>For students on and around Locust Walk</span>
+          </span>
+        </a>
+        <nav class="topnav" aria-label="Main">
+          <a href="#marketplace">Browse</a>
+          <a href="#sellers">Top sellers</a>
+          <a href="#how-it-works">How it works</a>
+        </nav>
+        <button class="cart-button" id="cartButton" type="button" aria-label="Open saved items">
+          <span>Saved</span>
+          <strong id="cartCount">0</strong>
+        </button>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">UPenn Student Marketplace</p>
+            <h1>Buy smarter on campus. Sell before move-out chaos hits.</h1>
+            <p class="hero-text">
+              Furniture, textbooks, tech, and dorm staples from Penn students who would rather meet
+              at Huntsman, Hill, or a 1920 Commons table than deal with shipping labels.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-action" href="#marketplace">Shop listings</a>
+              <a class="secondary-action" href="#seller-form">Post an item</a>
+            </div>
+            <ul class="hero-stats" aria-label="Marketplace highlights">
+              <li><strong>620+</strong><span>active listings</span></li>
+              <li><strong>24h</strong><span>average turnaround</span></li>
+              <li><strong>6</strong><span>pickup zones on campus</span></li>
+            </ul>
+          </div>
+          <div class="hero-media">
+            <div class="hero-illustration" aria-hidden="true">
+              <div class="campus-panel campus-panel-a"></div>
+              <div class="campus-panel campus-panel-b"></div>
+              <div class="campus-panel campus-panel-c"></div>
+              <div class="campus-panel campus-panel-d"></div>
+              <div class="campus-window window-a"></div>
+              <div class="campus-window window-b"></div>
+              <div class="campus-window window-c"></div>
+              <div class="campus-window window-d"></div>
+              <div class="campus-card campus-card-a">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="campus-card campus-card-b">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="campus-card campus-card-c">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="hero-card">
+              <span class="status-dot"></span>
+              <div>
+                <strong>Verified with penn.edu email</strong>
+                <p>Listings prioritize on-campus exchange and student pricing.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="trust-strip" aria-label="Campus pickup zones">
+          <span>Pickup: Locust Walk</span>
+          <span>Huntsman Hall</span>
+          <span>Van Pelt</span>
+          <span>Hill House</span>
+          <span>1920 Commons</span>
+          <span>Houston Hall</span>
+        </section>
+
+        <section class="marketplace" id="marketplace">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Live Listings</p>
+              <h2>Everything a Penn student actually needs this semester</h2>
+            </div>
+            <div class="market-controls">
+              <label class="search-field" for="searchInput">
+                <span>Search</span>
+                <input id="searchInput" type="search" placeholder="desk lamp, econ textbook, mini fridge..." />
+              </label>
+            </div>
+          </div>
+
+          <div class="filters" id="filters" role="tablist" aria-label="Categories">
+            <button class="filter-chip active" data-filter="all" type="button">All</button>
+            <button class="filter-chip" data-filter="furniture" type="button">Furniture</button>
+            <button class="filter-chip" data-filter="tech" type="button">Tech</button>
+            <button class="filter-chip" data-filter="books" type="button">Books</button>
+            <button class="filter-chip" data-filter="essentials" type="button">Dorm Essentials</button>
+          </div>
+
+          <div class="product-grid" id="productGrid">
+            <article class="product-card" data-category="furniture" data-name="West Philly lounge chair">
+              <div class="product-art chair-art" aria-hidden="true">
+                <span class="blob blob-red"></span>
+                <span class="blob blob-blue"></span>
+                <span class="ground"></span>
+                <span class="chair-back"></span>
+                <span class="chair-seat"></span>
+                <span class="chair-arm left"></span>
+                <span class="chair-arm right"></span>
+                <span class="chair-leg leg-left"></span>
+                <span class="chair-leg leg-right"></span>
+              </div>
+              <div class="product-copy">
+                <div class="product-topline">
+                  <span class="badge">Furniture</span>
+                  <span class="pickup">Pickup near Hill</span>
+                </div>
+                <h3>West Philly lounge chair</h3>
+                <p>Compact reading chair with clean upholstery. Ideal for dorm corners and apartment sublets.</p>
+                <div class="product-meta">
+                  <strong>$85</strong>
+                  <span>by Maya, Wharton '27</span>
+                </div>
+                <button class="save-button" data-product="West Philly lounge chair" type="button">Save item</button>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="tech" data-name="TI-84 and charging bundle">
+              <div class="product-art tech-art" aria-hidden="true">
+                <span class="blob blob-red"></span>
+                <span class="blob blob-blue"></span>
+                <span class="ground"></span>
+                <span class="calc"></span>
+                <span class="phone"></span>
+                <span class="charger"></span>
+                <span class="cable"></span>
+              </div>
+              <div class="product-copy">
+                <div class="product-topline">
+                  <span class="badge">Tech</span>
+                  <span class="pickup">Pickup at Huntsman</span>
+                </div>
+                <h3>TI-84 and charging bundle</h3>
+                <p>Calculator, backup charger, and cable set ready for stats, finance, and late-night study rooms.</p>
+                <div class="product-meta">
+                  <strong>$62</strong>
+                  <span>by Daniel, SEAS '26</span>
+                </div>
+                <button class="save-button" data-product="TI-84 and charging bundle" type="button">Save item</button>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="books" data-name="Intro econ annotated set">
+              <div class="product-art books-art" aria-hidden="true">
+                <span class="blob blob-red"></span>
+                <span class="blob blob-blue"></span>
+                <span class="ground"></span>
+                <span class="book red"></span>
+                <span class="book blue"></span>
+                <span class="book gold"></span>
+              </div>
+              <div class="product-copy">
+                <div class="product-topline">
+                  <span class="badge">Books</span>
+                  <span class="pickup">Pickup by Van Pelt</span>
+                </div>
+                <h3>Intro econ annotated set</h3>
+                <p>Micro and macro textbooks with highlighted lecture-aligned notes and practice exam tabs.</p>
+                <div class="product-meta">
+                  <strong>$48</strong>
+                  <span>by Priya, CAS '28</span>
+                </div>
+                <button class="save-button" data-product="Intro econ annotated set" type="button">Save item</button>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="essentials" data-name="Dorm move-in starter crate">
+              <div class="product-art dorm-art" aria-hidden="true">
+                <span class="blob blob-red"></span>
+                <span class="blob blob-blue"></span>
+                <span class="ground"></span>
+                <span class="crate"></span>
+                <span class="crate-lid"></span>
+                <span class="lamp-base"></span>
+                <span class="lamp-shade"></span>
+                <span class="mirror"></span>
+                <span class="bottle"></span>
+              </div>
+              <div class="product-copy">
+                <div class="product-topline">
+                  <span class="badge">Dorm Essentials</span>
+                  <span class="pickup">Pickup at 1920 Commons</span>
+                </div>
+                <h3>Dorm move-in starter crate</h3>
+                <p>Lamp, storage bins, mirror, and laundry tote pulled together for quick move-in or sublet setup.</p>
+                <div class="product-meta">
+                  <strong>$74</strong>
+                  <span>by Elena, Nursing '27</span>
+                </div>
+                <button class="save-button" data-product="Dorm move-in starter crate" type="button">Save item</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="sellers" id="sellers">
+          <div class="section-head narrow">
+            <div>
+              <p class="eyebrow">Trusted Sellers</p>
+              <h2>Student-run shops that move fast during the semester</h2>
+            </div>
+          </div>
+          <div class="seller-grid">
+            <article class="seller-card">
+              <h3>Wharton Move-Out Club</h3>
+              <p>Curated apartment furniture and study gear with same-week pickup windows.</p>
+              <span>4.9 rating</span>
+            </article>
+            <article class="seller-card">
+              <h3>Quad Essentials</h3>
+              <p>Dorm storage, lighting, and mini-appliance bundles optimized for first years.</p>
+              <span>Top in Hill and Kings Court</span>
+            </article>
+            <article class="seller-card">
+              <h3>Penn Book Loop</h3>
+              <p>Course packs and used textbooks sorted by department and semester timing.</p>
+              <span>Fastest pickup near Van Pelt</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="how-it-works" id="how-it-works">
+          <div class="section-head narrow">
+            <div>
+              <p class="eyebrow">How it Works</p>
+              <h2>Built around how Penn students already exchange stuff</h2>
+            </div>
+          </div>
+          <div class="steps">
+            <article>
+              <span>01</span>
+              <h3>Verify with campus email</h3>
+              <p>Use a penn.edu address so buyers know the listing is local and pickup-ready.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Post with a pickup window</h3>
+              <p>Choose a familiar meetup point and set expectations before anyone messages.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Close the loop quickly</h3>
+              <p>Save favorites, compare price points, and message sellers before the good items vanish.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="seller-form-section" id="seller-form">
+          <div class="seller-form-card">
+            <div>
+              <p class="eyebrow">Post Your Listing</p>
+              <h2>List something before your group chat tells you it’s too late</h2>
+            </div>
+            <form class="seller-form" id="listingForm">
+              <label>
+                Item name
+                <input type="text" name="name" placeholder="Desk chair, Chem 101 book set..." required />
+              </label>
+              <label>
+                Category
+                <select name="category">
+                  <option>Furniture</option>
+                  <option>Tech</option>
+                  <option>Books</option>
+                  <option>Dorm Essentials</option>
+                </select>
+              </label>
+              <label>
+                Price
+                <input type="text" name="price" placeholder="$45" required />
+              </label>
+              <label>
+                Pickup zone
+                <input type="text" name="pickup" placeholder="Locust Walk, Huntsman..." required />
+              </label>
+              <button class="primary-action" type="submit">Create listing preview</button>
+            </form>
+            <p class="form-note" id="formNote">Your mock listing preview will appear here after submission.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+      <div class="cart-drawer-head">
+        <h2>Saved items</h2>
+        <button id="closeCart" type="button" aria-label="Close saved items">Close</button>
+      </div>
+      <ul id="savedList"></ul>
+      <p class="empty-state" id="emptyState">No saved items yet. Start with something before another student grabs it.</p>
+    </aside>
+    <div class="overlay" id="overlay" hidden></div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
